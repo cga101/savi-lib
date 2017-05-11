@@ -7,6 +7,8 @@ import { PhoneInput } from '../phone-input.component';
 })
 
 export class ContactMethod {
+
+  public mask = ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   @Input('email') pcmethod: string;
   @Input('emailValue') pcvalue: string;
   // @Input('smsMobileNumberAreaCode') mobileNumberAreaCode : string;
