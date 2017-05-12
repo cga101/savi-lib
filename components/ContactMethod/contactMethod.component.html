@@ -15,8 +15,7 @@
 		<ion-radio value="sms"></ion-radio>
 	</ion-item>
 
-	<ion-item no-lines no-border *ngIf="pcmethod == 'sms'">
-		<ion-input [textMask]="{mask: mask}" id="PNreg" name="mobile"
-				   placeholder="(123) 456-7890" [(ngModel)]="pn"></ion-input>
+	<ion-item no-lines *ngIf="pcmethod != 'email'">
+		<phone-input idsuffix="reg" [pn]="mobile" #phoneinput></phone-input>
 	</ion-item>
 </ion-list>
